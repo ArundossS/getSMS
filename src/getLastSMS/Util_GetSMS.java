@@ -47,7 +47,6 @@ public class Util_GetSMS extends ReadOTP{
 
 			driver.executeScript("seetest:client.swipe(\"Up\", 0, 500)");
 
-
 			try{
 				if(driver.findElement(By.xpath("//*[contains(@text,'MESSAGES')]")).isDisplayed()){
 				}
@@ -74,6 +73,7 @@ public class Util_GetSMS extends ReadOTP{
 
 				//We can add command here to click on clear button if needed
 				//driver.findElement(By.xpath("//*[@text='Clear notifications']")).click();
+				//driver.findElement(By.xpath("//*[@text='Clear']")).click();
 			}
 
 		}

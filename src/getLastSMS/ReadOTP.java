@@ -25,7 +25,6 @@ public class ReadOTP{
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
 
-
 		/*dc.setCapability(MobileCapabilityType.UDID, ""); //use your android device's UDID here
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
@@ -38,13 +37,16 @@ public class ReadOTP{
         dc.setCapability("noReset","true");
         dc.setCapability("dontGoHomeOnQuit", true);
         driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
-		 
 
         driver.setLogLevel(Level.INFO);
 		
 	}
 
 	@Test
+	
+	//In this specific scenario, we are launching Eribank and logging into it. After logging in, the flow will open notifications and check if there will be any notifications and gets it.
+	//And, you will have to replace this code with your relevant capabilities and application flow.
+	
 	public void AppLoginWithOTP() throws InterruptedException {
 		driver.context("NATIVE_APP");
 		driver.findElement(By.xpath("//*[@id='usernameTextField']|//*[@accessibilityLabel='usernameTextField']")).sendKeys("company");
