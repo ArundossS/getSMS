@@ -20,12 +20,12 @@ public class Util_GetSMS extends ReadOTP{
 		if (deviceOS.contains("ANDROID")) {
 
 			driver.executeScript("seetest:client.swipe(\"Up\", 0, 500)");
-			if(driver.findElement(By.xpath("//*[contains(@text,'JPMC')]")).isDisplayed()) // This should be an identifier to uniquely identify the text of your message
+			if(driver.findElement(By.xpath("//*[contains(@text,'Bank')]")).isDisplayed()) // This should be an identifier to uniquely identify the text of your message
 			{ 
-				if(driver.findElement(By.xpath("//*[contains(@text,'JPMC')]")).isDisplayed()){
+				if(driver.findElement(By.xpath("//*[contains(@text,'Bank')]")).isDisplayed()){
 					//driver.findElement(By.xpath("//*[@id='from' and @text='JA']")).click();
 
-					String MessageContent = driver.findElement(By.xpath("//*[contains(@text,'Your') and parent::*/preceding::*/*[contains(@text,'IT-JPMC')]]")).getAttribute("text");
+					String MessageContent = driver.findElement(By.xpath("//*[contains(@text,'Your') and parent::*/preceding::*/*[contains(@text,'Bank')]]")).getAttribute("text");
 
 					System.out.println("EntireMessage is "+MessageContent);				
 					
