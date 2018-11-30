@@ -23,7 +23,7 @@ public class Util_GetSMS extends ReadOTP{
 			if(driver.findElement(By.xpath("//*[contains(@text,'Bank')]")).isDisplayed()) // This should be an identifier to uniquely identify the text of your message
 			{ 
 				if(driver.findElement(By.xpath("//*[contains(@text,'Bank')]")).isDisplayed()){
-					//driver.findElement(By.xpath("//*[@id='from' and @text='JA']")).click();
+					//driver.findElement(By.xpath("//*[@id='from' and @text='Bank']")).click();
 
 					String MessageContent = driver.findElement(By.xpath("//*[contains(@text,'Your') and parent::*/preceding::*/*[contains(@text,'Bank')]]")).getAttribute("text");
 
